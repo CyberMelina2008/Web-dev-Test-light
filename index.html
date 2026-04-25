@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siklus Cahaya: Tata Surya Minimalis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="star-field" id="stars"></div>
+    <div id="photonBeam" class="photon"></div>
+
+    <div class="side-progress-container">
+        <div class="photon-dot" id="photonDot">
+            <span id="photonPlanetLabel">Matahari</span>
+        </div>
+        <div id="planetMarkers"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[9px] text-slate-600 uppercase tracking-widest font-medium">Luar Angkasa</div>
+        <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-[9px] text-yellow-600 uppercase font-bold tracking-widest">Titik Nol</div>
+    </div>
+
+    <div class="minimal-timer">
+        <div class="flex flex-col">
+            <div class="time-value" id="globalTimer">00:00</div>
+            <div class="time-unit">Siklus Foton</div>
+            
+            <div class="mt-4 flex flex-col border-l border-white/10 pl-4">
+                <span class="text-[9px] text-slate-500 uppercase tracking-tighter">Jarak Tempuh</span>
+                <span class="text-xs font-mono text-slate-300" id="distDisplay">0 km</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="planet-section flex-col text-center">
+        <div class="mb-10 relative">
+            <div class="w-64 h-64 bg-yellow-400 rounded-full blur-3xl absolute opacity-30 animate-pulse"></div>
+            <div class="w-64 h-64 bg-gradient-to-tr from-orange-600 to-yellow-300 rounded-full relative z-10 shadow-[0_0_80px_rgba(251,191,36,0.2)]"></div>
+        </div>
+        <h1 class="text-5xl font-light mb-4 font-space tracking-tighter">MATAHARI</h1>
+        <p class="text-slate-500 max-w-sm mx-auto text-xs leading-relaxed tracking-wide">Foton lahir di sini. Perjalanan melintasi tata surya dimulai sekarang.</p>
+    </section>
+
+    <div id="solarSystem"></div>
+
+    <section class="min-h-[50vh] flex items-center justify-center p-6 text-center">
+        <div class="max-w-xl">
+            <h2 class="text-2xl font-light mb-2 font-space tracking-tight text-slate-400 uppercase tracking-[0.5em]">Akhir Jangkauan</h2>
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">Cahaya terus melaju melampaui batas yang kita kenal.</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

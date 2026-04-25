@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-deep: #020617;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.star-field {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+}
+
+.photon {
+    position: fixed;
+    left: 50%; top: 0;
+    width: 4px; height: 100px;
+    background: linear-gradient(to bottom, transparent, #fbbf24, #ffffff, transparent);
+    filter: blur(1px);
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.planet-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10%;
+}
+
+.planet-visual {
+    position: relative;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.planet-glow {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Sidebar Progres Kanan */
+.side-progress-container {
+    position: fixed;
+    right: 60px; top: 15%;
+    height: 70vh; width: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 100;
+    border-radius: 2px;
+}
+
+.photon-dot {
+    position: absolute;
+    left: 50%;
+    width: 16px; height: 16px;
+    background: #fbbf24;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px #fbbf24;
+    z-index: 10;
+}
+
+#photonPlanetLabel {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.planet-marker {
+    position: absolute;
+    left: 50%;
+    width: 8px; height: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Minimalist Timer Panel */
+.minimal-timer {
+    position: fixed;
+    bottom: 40px; 
+    left: 40px;
+    z-index: 100;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.time-value {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #f8fafc;
+}
+
+.time-unit {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #fbbf24;
+    letter-spacing: 0.3em;
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
