@@ -14,7 +14,7 @@ const planets = [
 const solarSystem = document.getElementById('solarSystem');
 const markerContainer = document.getElementById('planetMarkers');
 const maxDist = planets[planets.length - 1].dist;
-const maxTimeSeconds = 14994; // Waktu tempuh ke Neptunus
+const maxTimeSeconds = 10000; // Waktu tempuh ke Neptunus
 
 // Inisialisasi Konten Planet
 planets.forEach(p => {
