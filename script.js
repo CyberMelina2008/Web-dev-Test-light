@@ -62,7 +62,7 @@ let lastPlanet = "Matahari";
 
 function startPhoton() {
     gsap.to(photonState, {
-        progress: 1, duration: 45, ease: "none", repeat: -1,
+        progress: 1, duration: 30, ease: "none", repeat: -1,
         onUpdate: () => {
             const p = photonState.progress;
             const realTimeSeconds = p * maxTimeSeconds;
@@ -95,7 +95,7 @@ function formatMinimal(totalSeconds) {
     const h = Math.floor(totalSeconds / 3600);
     const m = Math.floor((totalSeconds % 3600) / 60);
     const s = Math.floor(totalSeconds % 60);
-    
+
     if (h > 0) {
         return `${h}j ${m}m`;
     }
